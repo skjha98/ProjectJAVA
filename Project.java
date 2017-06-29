@@ -1,8 +1,51 @@
 import java.util.Scanner;
+class Student{
+  String sName;
+  int sAge;
+  int sRollNo;
+  String sCourse;
+  void setSName(String name){
+    sName = name;
+  }
+  void setSAge(int age){
+    sAge = age;
+  }
+  void setSRollNo(int rollno){
+    sRollNo = rollno;
+  }
+  void setSCourse(String course){
+    sCourse = course;
+  }
+  String getSName(){
+    return sName;
+  }
+  int getSAge(){
+    return sAge;
+  }
+  int getSRollNo(){
+    return sRollNo;
+  }
+  String getSCourse(){
+    return sCourse;
+  }
+}
 public class Project{
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
-    int a = input.nextInt();
-    System.out.println("Good Morning SJ" + a);
+    System.out.print("Enter the number of Students: ");
+    int num = input.nextInt();
+    Student[] studArray = new Student[num];
+    for(int i=0; i<num; i++){
+      System.out.println("Enter the details for Student " + (i+1));
+      studArray[i] = new Student();
+      System.out.print("\tEnter Name: ");
+      studArray[i].setSName(input.next());
+      System.out.print("\tEnter Age: ");
+      studArray[i].setSAge(input.nextInt());
+      System.out.print("\tEnter Roll No.: ");
+      studArray[i].setSRollNo(input.nextInt());
+      System.out.print("\tEnter Course: ");
+      studArray[i].setSCourse(input.next());
+    }
   }
 }
