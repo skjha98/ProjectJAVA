@@ -47,5 +47,17 @@ public class Project{
       System.out.print("\tEnter Course: ");
       studArray[i].setSCourse(input.next());
     }
+    System.out.println("Traversing the Input details for Student !!!");
+    for(int i=0; i<num; i++){
+      System.out.println("Showing details for Student " + (i+1));
+      System.out.println("\tName: " + studArray[i].getSName());
+      System.out.println("\tAge: " + studArray[i].getSAge());
+      System.out.println("\tRoll No.: " + studArray[i].getSRollNo());
+      System.out.println("\tCourse: " + studArray[i].getSCourse());
+      try{
+        Thread.sleep(1000);
+      }
+      catch(Exception e){}
+    }
   }
 }
