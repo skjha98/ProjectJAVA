@@ -1,32 +1,41 @@
 import java.util.Scanner;
-class Student{
+interface SetStudent{
+  void setSName(String name);
+  void setSAge(int age);
+  void setSRollNo(int rollno);
+  void setSCourse(String course);
+}
+abstract class RawStudent{
   String sName;
   int sAge;
   int sRollNo;
   String sCourse;
-  void setSName(String name){
-    sName = name;
-  }
-  void setSAge(int age){
-    sAge = age;
-  }
-  void setSRollNo(int rollno){
-    sRollNo = rollno;
-  }
-  void setSCourse(String course){
-    sCourse = course;
-  }
-  String getSName(){
+  public String getSName(){
     return sName;
   }
-  int getSAge(){
+  public int getSAge(){
     return sAge;
   }
-  int getSRollNo(){
+  public int getSRollNo(){
     return sRollNo;
   }
-  String getSCourse(){
+  public String getSCourse(){
     return sCourse;
+  }
+}
+class Student extends RawStudent implements SetStudent{
+
+  public void setSName(String name){
+    sName = name;
+  }
+  public void setSAge(int age){
+    sAge = age;
+  }
+  public void setSRollNo(int rollno){
+    sRollNo = rollno;
+  }
+  public void setSCourse(String course){
+    sCourse = course;
   }
 }
 public class Project{
