@@ -3,13 +3,15 @@ interface SetStudent{
   void setSName(String name);
   void setSAge(int age);
   void setSRollNo(int rollno);
-  void setSCourse(String course);
+  void setSCourse(String course)
+  void setSAdd(String add);
 }
 abstract class RawStudent{
   String sName;
   int sAge;
   int sRollNo;
   String sCourse;
+  String sAdd;
   public String getSName(){
     return sName;
   }
@@ -21,6 +23,8 @@ abstract class RawStudent{
   }
   public String getSCourse(){
     return sCourse;
+  }
+  public String getSAdd(){
   }
 }
 class Student extends RawStudent implements SetStudent{
@@ -36,6 +40,8 @@ class Student extends RawStudent implements SetStudent{
   }
   public void setSCourse(String course){
     sCourse = course;
+  }
+  public void setSAdd(String Add){
   }
 }
 public class Project{
@@ -55,6 +61,8 @@ public class Project{
       studArray[i].setSRollNo(input.nextInt());
       System.out.print("\tEnter Course: ");
       studArray[i].setSCourse(input.next());
+      System.out.print("\tEnter Add: ");
+      studArray[i].setSAdd(input.next());
     }
     System.out.println("Traversing the Input details for Student !!!");
     for(int i=0; i<num; i++){
@@ -63,6 +71,8 @@ public class Project{
       System.out.println("\tAge: " + studArray[i].getSAge());
       System.out.println("\tRoll No.: " + studArray[i].getSRollNo());
       System.out.println("\tCourse: " + studArray[i].getSCourse());
+      System.out.println("\tAdd: " + studArray[i].getSAdd());
+      
       try{
         Thread.sleep(1000);
       }
