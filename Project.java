@@ -25,6 +25,7 @@ abstract class RawStudent{
     return sCourse;
   }
   public String getSAdd(){
+    return sAdd;
   }
 }
 class Student extends RawStudent implements SetStudent{
@@ -42,6 +43,7 @@ class Student extends RawStudent implements SetStudent{
     sCourse = course;
   }
   public void setSAdd(String Add){
+    sAdd = Add;
   }
 }
 public class Project{
